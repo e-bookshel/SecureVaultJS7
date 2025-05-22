@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SecureVaultJS7 - Ultra Secure File Encrypt/Decrypt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>SecureVaultJS7</header>
+  <main>
+    <label for="fileInput">Select File:</label>
+    <input type="file" id="fileInput" accept="*/*" />
+
+    <label for="passwordInput">Enter Password:</label>
+    <input type="password" id="passwordInput" placeholder="Strong password" autocomplete="new-password" />
+
+    <button id="encryptBtn" disabled>Encrypt File</button>
+    <button id="decryptBtn" disabled>Decrypt File</button>
+
+    <div id="progress"><div id="progress-bar"></div></div>
+    <div id="status"></div>
+  </main>
+
+  <div id="lock-overlay">Session Locked - Please Refresh</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

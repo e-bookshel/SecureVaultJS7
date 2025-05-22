@@ -1,0 +1,137 @@
+body {
+  background: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0;
+  display: flex; flex-direction: column; align-items: center;
+  min-height: 100vh;
+  user-select: none;
+  animation: fadeIn 1s ease forwards;
+}
+header {
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ffc8;
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  animation: slideDown 1s ease forwards;
+}
+main {
+  background: #1e1e1e;
+  padding: 2rem;
+  margin: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffc8aa;
+  max-width: 420px;
+  width: 100%;
+  animation: popIn 0.8s ease forwards;
+}
+label {
+  display: block;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+input[type="file"], input[type="password"] {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.2s;
+}
+input[type="file"]:hover, input[type="password"]:hover {
+  background: #333;
+}
+button {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #00ffc8;
+  color: #000;
+  font-weight: 700;
+  transition: background 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.4s;
+}
+button:hover:not(:disabled) {
+  background: #00b38a;
+  color: #fff;
+}
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+  color: #888;
+}
+#status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  min-height: 1.5em;
+  color: #00ffc8;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+}
+#progress {
+  width: 100%;
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  margin-top: 1rem;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+}
+#progress-bar {
+  height: 100%;
+  background: #00ffc8;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+#lock-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #00ffc8;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  user-select: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes popIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
